@@ -1,0 +1,17 @@
+{
+    "name": "bdsl/self-naming-test-example",
+    "autoload": {
+        "psr-4": {
+            "Bdsl\\SelfNamingTestExample\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Barney Laurance",
+            "email": "barney@redmagic.org.uk"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
