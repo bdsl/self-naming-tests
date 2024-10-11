@@ -33,4 +33,5 @@ jobs:
       run: vendor/bin/phpunit
 
     - name: Run tests with testdox output
+      if: ${{ always() }}
       run: vendor/bin/phpunit --testdox
