@@ -6,6 +6,8 @@ use function PHPUnit\Framework\assertSame;
  * Just tests some random things to demonstrate the concept of self-naming tests. Might be nice for cases
  * where the test implementation is short enough to also function as the name.
  *
+ * Some tests intentionally fail so that we can see how the output appears for failing and passing tests.
+ *
  * @coversNothing
  */
 class EasterDateTest extends \PHPUnit\Framework\TestCase
