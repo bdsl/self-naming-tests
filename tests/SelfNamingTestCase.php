@@ -49,5 +49,5 @@ trait SelfNamingTestCase
      *
      * @return list<Closure():null|bool> *
      */
-    public abstract static function testCases(): array;
+    public abstract static function checks(): array;
 }

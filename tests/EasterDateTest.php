@@ -15,7 +15,7 @@ use function PHPUnit\Framework\assertSame;
 class EasterDateTest extends \PHPUnit\Framework\TestCase
 {
     use SelfNamingTestCase;
-    public static function testCases(): array
+    public static function checks(): array
     {
         return [
             fn() => 1_711_843_200 === easter_date(2024),
