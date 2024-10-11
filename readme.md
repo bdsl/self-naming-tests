@@ -5,7 +5,25 @@ Barney Laurance <barney@barneylaurance.uk>
 Testing out the idea of having anonymous / self-naming unit test cases. The source code for each
 test must be short (no more than one line) and so also functions as the name of the test.
 
-Output of the sample test here, as you can see in [github actions](https://github.com/bdsl/self-naming-tests/actions)
+Given tests defined like so:
+
+```php
+    public static function checks(): array
+    {
+        return [
+            fn() => 1_711_843_200 === easter_date(2024),
+            fn() => strtotime('Sun, 31 Mar 2024') === easter_date(2024),
+            fn() => 1_711_843_201 === easter_date(2024),
+            fn() => assertSame(35, easter_date(2024)),
+            fn() => assertSame(1_711_843_200, easter_date(2024)),
+            fn() => 3 > 1,
+            fn() => 3 < 1,
+            fn() => rand(0, 100) > 10,
+        ];
+    }
+```
+
+output is as follows, as you can see in [github actions](https://github.com/bdsl/self-naming-tests/actions)
 is currently as follows:
 
 ```text
