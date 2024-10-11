@@ -2,7 +2,8 @@
     "name": "bdsl/self-naming-test-example",
     "autoload": {
         "psr-4": {
-            "Bdsl\\SelfNamingTestExample\\": "src/"
+            "BDSL\\SelfNamingTestExample\\Test\\": "tests/",
+            "BDSL\\SelfNamingTestExample\\": "src/"
         }
     },
     "authors": [

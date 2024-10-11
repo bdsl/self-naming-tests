@@ -1,5 +1,7 @@
 <?php
 
+namespace BDSL\SelfNamingTestExample\Test;
+
 use function PHPUnit\Framework\assertSame;
 
 /**

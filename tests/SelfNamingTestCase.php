@@ -1,4 +1,5 @@
 <?php
+namespace BDSL\SelfNamingTestExample\Test;
 
 trait SelfNamingTestCase
 {
@@ -6,8 +7,8 @@ trait SelfNamingTestCase
     public static function callablesProvider()
     {
         $testCases = [];
-        foreach (self::testCases() as $callable) {
-            $reflectionFunction = new ReflectionFunction($callable);
+        foreach (self::checks() as $callable) {
+            $reflectionFunction = new \ReflectionFunction($callable);
             $startLine = $reflectionFunction->getStartLine();
             $endLine = $reflectionFunction->getEndLine();
             $filename = $reflectionFunction->getFileName();
@@ -20,7 +21,7 @@ trait SelfNamingTestCase
                 );
             }
 
-            $file = new SplFileObject($filename);
+            $file = new \SplFileObject($filename);
             $file->seek($startLine-1);
             $line = trim($file->current(), " \n\r\t\v\0,");
             $lineWithoutFunctionPrefix = preg_replace('/^fn\(\) =>\h+/s', '', $line);
